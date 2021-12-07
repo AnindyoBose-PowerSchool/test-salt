@@ -7,6 +7,8 @@ salt '*'  cmd.run '[ -d test-salt ] && echo "This directory exists!" && rm -rf t
 salt '*'  cmd.run 'git clone https://github.com/AnindyoBose-PowerSchool/test-salt.git'
 echo 'cloning'
 sleep 10s
+cd salt-states
+cp apache.sls /srv/salt/apache.sls
 salt '*'  cmd.run 'ls'
 salt '*'  cmd.run 'cd test-salt'
 salt '*'  cmd.run 'ls'
