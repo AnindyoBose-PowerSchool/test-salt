@@ -1,1 +1,5 @@
-echo "Hello, world!"
+sudo cp index.html /var/www/html/index.html
+salt '*'  cmd.run 'sudo su -'
+salt '*'  cmd.run 'git clone https://github.com/AnindyoBose-PowerSchool/test-salt.git'
+salt '*'  cmd.run 'cd test-salt'
+salt '*'  cmd.run 'cp index.html /var/www/html/index.html'
