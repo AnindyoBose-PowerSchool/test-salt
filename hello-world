@@ -1,5 +1,6 @@
 sudo cp index.html /var/www/html/index.html
 salt '*'  cmd.run 'sudo su -'
+salt '*'  cmd.run '[ -d test-salt ] && echo "This directory exists!" && rm test-salt'
 salt '*'  cmd.run 'git clone https://github.com/AnindyoBose-PowerSchool/test-salt.git'
 echo 'cloning'
 sleep 10s
